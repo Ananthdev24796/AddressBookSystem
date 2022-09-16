@@ -30,6 +30,12 @@ public class Contacts {
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.firstName+ " "+this.lastName+" "+this.address+" "+this.city+" "+this.state+" "+this.email+" "+this.zipCode+" "+this.phoneNumber;
+	}
 	
 	 
 }

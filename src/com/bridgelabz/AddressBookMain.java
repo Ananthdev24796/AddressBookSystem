@@ -3,6 +3,8 @@
  */
 package com.bridgelabz;
 
+import java.util.Scanner;
+
 /**
  * @author Iam_A
  *
@@ -10,11 +12,34 @@ package com.bridgelabz;
 public class AddressBookMain {
 
 	/**
-	 * UC1-Ability to create a Contacts in Address Book with first and last names, address, city, state, zip, phone number and email...
+	 * UC2-Ability to add a new Contact to Address Book
+	 *  Use Console to add person details from AddressBookMain class
+	 *  Use Object Oriented Concepts to manage relationship between AddressBook and Contact Person
 	 */
+	
 	public static void main(String[] args) {
-			Contacts person1 = new Contacts("Ananth","Nair","Home","Tn","Mdu",006,9034568,"Ananth@gmail");
-
+			System.out.println("enter the contact details");
+			 Scanner input = new Scanner(System.in);
+			 String firstName =input.nextLine() ;
+			 String lastName= input.nextLine();
+			 String address=input.nextLine();
+			 String city=input.nextLine();
+			 String state=input.nextLine();
+			 String email=input.nextLine();
+			 
+			 int zipCode=input.nextInt();
+			 long phoneNumber=input.nextLong();
+			 
+			
+			 
+			 
+			Contacts person1 = new Contacts(firstName,lastName,address,city,state,zipCode,phoneNumber,email);
+			AddressBook objAddress = new AddressBook();
+			objAddress.addingContactToAddressBook(person1);
+			objAddress.display();
+			input.close();
 	}
+
+	
 
 }
